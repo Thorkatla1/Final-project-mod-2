@@ -56,8 +56,9 @@ button {
 }
 
 .button__wrapper {
-  width: 100%;
-  max-width: 448px;
+  width: 80%;
+  margin-left: 60px;
+
   height: 68px;
   position: relative;
   display: flex;
@@ -312,7 +313,8 @@ HEADER/LANDING
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
-  margin-top: 20px;
+  margin-top: 80px;
+  color: rgba(0, 0, 0, 0.321);
 }
 .header__email--btn {
   position: absolute;
@@ -340,11 +342,7 @@ HEADER/LANDING
   padding-top: 20px;
   max-width: calc(90%);
 }
-.header__customer--para {
-  margin-top: 80px;
-  color: rgba(0, 0, 0, 0.321);
-  margin-right: 330px;
-}
+
 .header__logo--img {
   opacity: 45%;
   margin-right: 48px;
@@ -519,7 +517,7 @@ QUALITY WORK ↓
 }
 
 .quality__row {
-  width: 40%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -708,7 +706,7 @@ PRICING ↓
   justify-content: center;
   align-items: center;
   margin: 0 auto;
- max-width: 500px;
+  max-width: 500px;
   color: rgba(0, 0, 0, 0.39);
 }
 .plans {
@@ -1139,6 +1137,7 @@ MOBILE RESPONSIVENESS ↓
   .header__container.quality__container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
   h1 {
     font-size: 36px;
@@ -1157,11 +1156,17 @@ MOBILE RESPONSIVENESS ↓
   h2 {
     font-size: 36px;
   }
+  .header__customer--para {
+    text-align: center;
+  }
 
   .header__description--para {
     width: 100%;
     text-align: center;
     margin: 0 auto;
+  }
+  .header__description {
+    text-align: center;
   }
   .service {
     width: 100%;
@@ -1248,11 +1253,12 @@ MOBILE RESPONSIVENESS ↓
     width: 50%;
   }
 
-  #pricing h1{
+  #pricing h1 {
     font-size: 48px;
   }
-  .pricing__para{
-    max-width: 600px; text-align: center;
+  .pricing__para {
+    max-width: 600px;
+    text-align: center;
   }
   .plans {
     display: flex;
@@ -1260,32 +1266,30 @@ MOBILE RESPONSIVENESS ↓
     justify-content: center;
     align-items: center;
   }
-  
-  }
-  .testimonials__row {
-    padding-left: 20px;
-  }
-  .start__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
-    margin: 96px;
-  }
-  .h3__white {
-    font-size: 30px;
-    width: 60%;
-    text-align: center;
-  }
-  .btn__container {
-    width: 100%;
-    margin-top: 40px;
-    justify-content: center;
-  }
-  #footer {
-    padding-top: 96px;
-  }
+}
+.testimonials__row {
+  padding-left: 20px;
+}
+.start__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  margin: 96px;
+}
+.h3__white {
+  font-size: 30px;
+  width: 60%;
+  text-align: center;
+}
+.btn__container {
+  width: 100%;
+  margin-top: 40px;
+  justify-content: center;
+}
+#footer {
+  padding-top: 96px;
 }
 /* 
 
@@ -1296,15 +1300,19 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
 @media (max-width: 768px) {
   h1 {
     font-size: 36px;
-  }
-  .h2__header {
-    font-size: 28px;
+    text-align: center;
   }
   .btn__menu {
     visibility: visible;
   }
+  .header__customer--para {
+    margin-top: 40px;
+  }
   #quality .row #values .row {
     flex-direction: column-reverse;
+  }
+  .quality__img--wrapper{
+    max-width: 520px;
   }
   #steps .row,
   #testimonials .row {
@@ -1318,11 +1326,6 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
   .tag {
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  .header__description {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
 
@@ -1341,9 +1344,8 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     flex-direction: column-reverse;
     width: 100%;
   }
-  .quality__row {
+  .row.quality__row {
     width: 100%;
-    max-width: 448px;
     padding: 24px 0 36px 0;
   }
   .quality__header {
@@ -1356,6 +1358,7 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     padding: 0;
   }
   .quality__para {
+    margin: 0 auto;
     text-align: center;
     font-size: 14px;
     max-width: 420px;
@@ -1391,6 +1394,8 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
   }
   .steps__column {
     margin: 0 24px;
+    display: flex;
+    flex-direction: column;
   }
   .steps .number {
     margin-right: 0;
@@ -1460,12 +1465,15 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
   .pricing__wrapper {
     padding: none;
   }
+  #testimonials .row {
+    width: 100%;
+    max-width: 520px;
+    padding: 0 0 0 0;
+  }
   .testimonials__container {
     flex-direction: column;
   }
-  #testimonials .row {
-    width: 100%;
-  }
+
   #testimonials h2 {
     font-size: 36px;
   }
@@ -1480,6 +1488,7 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 32px;
   }
   .testimonial__img--title {
     padding: none;
@@ -1639,8 +1648,10 @@ SMALL PHONES, LARGE SMARTPHONES
   #testimonials h3 {
     font-size: 20px;
   }
-
-  .testimonials__column {
+  .testimonials__row {
+    margin: 0 0 0 0;
+  }
+  .row.testimonials__column {
     max-width: 100%;
     padding: 0 0 0 0;
   }
