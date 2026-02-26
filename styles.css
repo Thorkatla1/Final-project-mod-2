@@ -193,11 +193,12 @@ Nav
   color: #6415ff;
 }
 .menu__backdrop {
+  padding-top: 96px;
   position: fixed;
   background-color: white;
   top: 0;
   left: 0;
-  bottom: 0;
+
   right: 0;
   z-index: 100;
   display: flex;
@@ -912,8 +913,8 @@ TESTIMONIALS
   overflow: hidden;
   margin-right: 20px;
 }
-.testimonials__img{
-  width: 100%
+.testimonials__img {
+  width: 100%;
 }
 
 .testimonials__para {
@@ -991,7 +992,8 @@ START / CALL TO ACTION ↓
   background-color: rgb(100, 21, 255);
   border-radius: 8px;
   height: 100%;
-
+  overflow: hidden;
+  z-index: 1;
 }
 .start__blob--1 {
   position: absolute;
@@ -1002,6 +1004,7 @@ START / CALL TO ACTION ↓
   transform: translate(-5rem, 8rem);
   color: rgb(80 17 204);
   opacity: 0.5;
+  z-index: -1;
 }
 .start__blob--2 {
   position: absolute;
@@ -1044,6 +1047,7 @@ START / CALL TO ACTION ↓
   background-color: #d87a8a;
   border: 1px solid #f7fafc;
   color: white;
+  z-index: 1;
 }
 .btn__start1:hover {
   background-color: #db8a97;
@@ -1121,6 +1125,7 @@ FOOTER ↓
   flex-direction: column;
   flex-wrap: wrap;
   line-height: 2;
+  z-index: 1;
 }
 .footer__text {
   color: #f7fafc;
@@ -1158,6 +1163,9 @@ FOOTER ↓
 .footer__line {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.151);
+}
+.footer__icon--wrapper {
+  z-index: 1;
 }
 .fa-facebook {
   display: flex;
@@ -1240,7 +1248,10 @@ MOBILE RESPONSIVENESS ↓
   h1 {
     font-size: 36px;
   }
-
+  .menu__link {
+    font-size: 32px;
+    padding-top: 40px;
+  }
   /* Fix for the heading text wrap */
   .h2__header,
   .row.header__row {
@@ -1292,7 +1303,6 @@ MOBILE RESPONSIVENESS ↓
   .quality__img {
     width: 100%;
     max-width: 680px;
-   
   }
 
   .plan__highlighted {
@@ -1305,6 +1315,7 @@ MOBILE RESPONSIVENESS ↓
   }
   .steps {
     text-align: left;
+    padding-top: 96px;
   }
   .steps__column {
     display: flex;
@@ -1374,7 +1385,6 @@ MOBILE RESPONSIVENESS ↓
     align-items: center;
     justify-content: center;
     padding: 60px;
-  
   }
   .h3__white {
     font-size: 30px;
@@ -1387,9 +1397,7 @@ MOBILE RESPONSIVENESS ↓
     justify-content: center;
   }
   #footer {
-  
   }
- 
 }
 /* 
 
@@ -1608,9 +1616,10 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     color: #4e4ce4;
   }
   .start__description {
-    width: 760x;
+    width: 70p;
     margin: 20px;
   }
+
   .footer__row {
     flex-wrap: wrap;
     justify-content: left;
@@ -1643,12 +1652,34 @@ SMALL PHONES, LARGE SMARTPHONES
 
 */
 @media (max-width: 640px) {
+  #landing,
+  #service,
+  #quality,
+  #steps,
+  #values,
+  #pricing,
+  #testimonials,
+  #start {
+    max-width: 600px;
+    padding: 20px;
+  }
   .container {
     padding: 100px 0;
   }
   .nav__logo {
     margin: 8px 0;
     padding-bottom: 4px;
+  }
+  .menu__link {
+    font-size: 20px;
+    padding: 18px;
+  }
+  .menu__link {
+    font-size: 24px;
+    padding: 32px;
+  }
+  .row.header__row {
+    padding: 20px;
   }
   .h2__header .purple {
     display: inline; /* Keep it inline so it flows with text */
@@ -1678,20 +1709,7 @@ SMALL PHONES, LARGE SMARTPHONES
   main {
     margin-bottom: 80px;
   }
-  #quality,
-  #pricing {
-    padding: 0 0 0 0;
-  }
-  #service .container {
-    padding: 0 0 0 0;
-  }
-  .quality__container {
-    padding: 0 0 0 0;
-  }
-  .pricing__container {
-    margin: 0;
-  }
-  #service p {
+   #service p {
     font-size: 14px;
   }
   .services {
@@ -1719,6 +1737,29 @@ SMALL PHONES, LARGE SMARTPHONES
   .service__para {
     width: 100%;
   }
+  #quality,
+  #pricing {
+    padding: 0 0 0 0;
+  }
+  #service .container {
+    padding: 0 0 0 0;
+  }
+  .quality__row {
+    max-width: 80%;
+    margin-top: 80px;
+  }
+  .quality__container {
+    padding: 0 0 0 0;
+  }
+   .values__img--container {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .pricing__container {
+    margin: 0;
+  }
+ 
   .pricing__wrapper {
     justify-content: space-between;
   }
@@ -1730,6 +1771,9 @@ SMALL PHONES, LARGE SMARTPHONES
   }
   .plan {
     max-width: 300px;
+  }
+  .pricing__wrapper {
+    padding: none;
   }
   .pricing__para {
     width: 100%;
@@ -1791,10 +1835,7 @@ SMALL PHONES, LARGE SMARTPHONES
     align-items: center;
     justify-content: center;
   }
-  .values__img--container {
-    width: 100%;
-    padding: 0 0 0 0;
-  }
+ 
   .btn__container {
     display: flex;
     flex-direction: column;
@@ -1804,6 +1845,21 @@ SMALL PHONES, LARGE SMARTPHONES
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .btn__start1,
+  .btn__start2 {
+    padding: 12px 24px;
+    width: 80%;
+  }
+  .btn__container {
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .img__wrapper {
+    padding: 0 0 0 0;
+    margin: 0;
   }
   .footer__link {
     white-space: nowrap;
@@ -1818,17 +1874,7 @@ SMALL PHONES, LARGE SMARTPHONES
     margin: 0 0 0 0;
     justify-content: left;
   }
-  .btn__start1,
-  .btn__start2 {
-    padding: 12px 24px;
-    width: 80%;
-  }
-  .btn__container {
-    justify-content: center;
-    align-items: center;
-  }
-  .img__wrapper {
-    padding: 0 0 0 0;
-    margin: 0;
+  .copyright {
+    z-index: 1;
   }
 }
