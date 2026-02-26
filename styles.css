@@ -725,6 +725,8 @@ PRICING ↓
   align-items: center;
 }
 .pricing__wrapper {
+  position: relative;
+
   width: 100%;
   text-align: center;
   margin: 96px 0;
@@ -738,30 +740,30 @@ PRICING ↓
   color: rgba(0, 0, 0, 0.39);
 }
 .plans {
-  position: relative;
   display: flex;
   gap: 32px;
   width: 100%;
   padding-top: 32px;
-  z-index: 10;
 }
-.plans__blob {
-  z-index: -10;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
-  height: 256px;
-  width: 256px;
-  opacity: 0.25;
-}
-.plan {
+
+.plan { 
+  z-index: 1;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+.plans__blob {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+  height: 256px;
+  width: 256px;
+  opacity: 0.25;
 }
 .section__title {
   font-size: 48px;
