@@ -523,7 +523,12 @@ QUALITY WORK ↓
   flex-direction: column;
 }
 .quality__img--wrapper {
+  border-radius: 4px;
+  border: 1px solid rgb(229, 231, 235);
   position: relative;
+  margin: 0 56px;
+  z-index: 2;
+  display: flex;
 }
 
 .quality__img {
@@ -726,7 +731,7 @@ PRICING ↓
 }
 .pricing__wrapper {
   position: relative;
-
+  z-index: 1;
   width: 100%;
   text-align: center;
   margin: 96px 0;
@@ -746,7 +751,8 @@ PRICING ↓
   padding-top: 32px;
 }
 
-.plan { 
+.plan {
+  position: relative;
   z-index: 1;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -755,16 +761,7 @@ PRICING ↓
   flex: 1;
   flex-direction: column;
 }
-.plans__blob {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
-  height: 256px;
-  width: 256px;
-  opacity: 0.25;
-}
+
 .section__title {
   font-size: 48px;
 }
@@ -869,7 +866,7 @@ PRICING ↓
   border-top-width: 0;
   border-radius: 0 0 12px 12px;
   padding: 16px;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* 
@@ -893,7 +890,7 @@ TESTIMONIALS
   max-width: 1200px;
 }
 .testimonials__row {
-  width: 600px;
+  max-width: 40%;
 }
 
 .testimonials__column {
@@ -914,6 +911,9 @@ TESTIMONIALS
   border-radius: 500px;
   overflow: hidden;
   margin-right: 20px;
+}
+.testimonials__img{
+  width: 100%
 }
 
 .testimonials__para {
@@ -991,7 +991,7 @@ START / CALL TO ACTION ↓
   background-color: rgb(100, 21, 255);
   border-radius: 8px;
   height: 100%;
-  padding: 96px 0;
+
 }
 .start__blob--1 {
   position: absolute;
@@ -1292,7 +1292,7 @@ MOBILE RESPONSIVENESS ↓
   .quality__img {
     width: 100%;
     max-width: 680px;
-    padding: 0 40px;
+   
   }
 
   .plan__highlighted {
@@ -1374,7 +1374,7 @@ MOBILE RESPONSIVENESS ↓
     align-items: center;
     justify-content: center;
     padding: 60px;
-    margin: 96px;
+  
   }
   .h3__white {
     font-size: 30px;
@@ -1387,8 +1387,9 @@ MOBILE RESPONSIVENESS ↓
     justify-content: center;
   }
   #footer {
-    padding-top: 96px;
+  
   }
+ 
 }
 /* 
 
@@ -1411,7 +1412,7 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     flex-direction: column-reverse;
   }
   .quality__img--wrapper {
-    max-width: 520px;
+    max-width: 480px;
   }
   #steps .row,
   #testimonials .row {
