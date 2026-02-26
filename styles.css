@@ -279,6 +279,7 @@ HEADER/LANDING
   word-wrap: break-word;
 }
 .header__email--input {
+  outline: none;
   width: 100%;
   border-radius: 500px;
   border-style: solid;
@@ -1416,6 +1417,10 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
   .header__customer--para {
     margin-top: 40px;
   }
+  .menu__link {
+    font-size: 24px;
+    padding-top: 44px;
+  }
   #quality .row #values .row {
     flex-direction: column-reverse;
   }
@@ -1484,7 +1489,6 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     justify-content: center;
   }
   .steps__tag,
-  .steps__para,
   .number__space {
     display: flex;
     flex-direction: column;
@@ -1493,6 +1497,7 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
   }
   .steps__text,
   .steps__para {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1678,9 +1683,29 @@ SMALL PHONES, LARGE SMARTPHONES
     font-size: 24px;
     padding: 32px;
   }
+  .button__wrapper{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .row.header__row {
     padding: 20px;
   }
+  .header__email--btn{
+    transform: translateY(80%);
+    height: 48px;
+    width: 100%;
+    margin: 20px;
+  }
+  .header__email--input {
+    font-size: 12px;
+    padding: 0 60px;
+    height: 48px;
+    max-width: 100%;
+  }
+
+  
   .h2__header .purple {
     display: inline; /* Keep it inline so it flows with text */
     /* Don't use display: block on the span */
@@ -1709,7 +1734,7 @@ SMALL PHONES, LARGE SMARTPHONES
   main {
     margin-bottom: 80px;
   }
-   #service p {
+  #service p {
     font-size: 14px;
   }
   .services {
@@ -1751,7 +1776,7 @@ SMALL PHONES, LARGE SMARTPHONES
   .quality__container {
     padding: 0 0 0 0;
   }
-   .values__img--container {
+  .values__img--container {
     width: 100%;
     padding: 0 0 0 0;
   }
@@ -1759,7 +1784,7 @@ SMALL PHONES, LARGE SMARTPHONES
   .pricing__container {
     margin: 0;
   }
- 
+
   .pricing__wrapper {
     justify-content: space-between;
   }
@@ -1778,6 +1803,13 @@ SMALL PHONES, LARGE SMARTPHONES
   .pricing__para {
     width: 100%;
     padding: 0 20px;
+  }
+  .quality__img--wrapper {
+    max-width: 85%;
+    margin: 0 24px 0 0;
+  }
+  .steps__para {
+    text-align: center;
   }
   #testimonials {
     padding: 20px;
@@ -1835,7 +1867,7 @@ SMALL PHONES, LARGE SMARTPHONES
     align-items: center;
     justify-content: center;
   }
- 
+
   .btn__container {
     display: flex;
     flex-direction: column;
