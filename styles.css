@@ -19,6 +19,7 @@ body {
 a {
   text-decoration: none;
 }
+
 p {
   line-height: 2;
 }
@@ -59,7 +60,7 @@ button {
 .button__wrapper {
   width: 80%;
   margin-left: 60px;
-
+  position: relative;
   height: 68px;
   position: relative;
   display: flex;
@@ -290,7 +291,6 @@ HEADER/LANDING
   padding: 20px 192px 20px 32px;
   font-weight: 500;
   font-size: 16px;
-  position: absolute;
   top: 0;
   bottom: 0;
   z-index: 0;
@@ -1685,29 +1685,31 @@ SMALL PHONES, LARGE SMARTPHONES
     font-size: 24px;
     padding: 32px;
   }
-  .button__wrapper{
-  
+
+  .button__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 0;
   }
   .row.header__row {
     padding: 20px;
   }
-  .header__email--btn{
+  .header__email--btn {
     transform: translateY(80%);
     height: 48px;
     width: 100%;
-    margin: 20px;
+    margin-top: 20px;
   }
   .header__email--input {
+    position: relative;
     font-size: 12px;
     padding: 0 60px;
     height: 48px;
     max-width: 100%;
+    margin-left: 40px;
   }
 
-  
   .h2__header .purple {
     display: inline; /* Keep it inline so it flows with text */
     /* Don't use display: block on the span */
