@@ -207,6 +207,7 @@ Nav
   visibility: hidden;
   opacity: 0;
   transition: all 300ms ease;
+  transform: translateX(500px);
 }
 .menu--open .menu__backdrop {
   background-color: white;
@@ -216,6 +217,7 @@ Nav
   opacity: 1;
   max-height: 100vh;
   overflow: hidden;
+  transform: translateX(0);
 }
 .menu--open {
   height: 100vh;
